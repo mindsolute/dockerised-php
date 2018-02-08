@@ -9,6 +9,8 @@ services:
         volumes:
             - ./code:/code
             - ./site.conf:/etc/nginx/conf.d/default.conf
+            - ./certs:/etc/letsencrypt
+            - ./certs-data:/data/letsencrypt
         networks:
             - code-network
     php:
